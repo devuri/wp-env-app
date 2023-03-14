@@ -1,0 +1,25 @@
+{
+    "name": "devuri/wp-env-app",
+    "type": "project",
+    "license": "MIT",
+    "description": "A base WordPress project to create web applications using environment variables.",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "devuri/wp-env-config": "dev-master"
+    },
+    "extra": {
+        "wordpress-install-dir": "public/wp",
+        "installer-paths": {
+            "public/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "public/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "public/content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}
