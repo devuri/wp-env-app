@@ -2,16 +2,7 @@
 
 use DevUri\Config\Setup;
 
-require_once __FILE__ . '/vendor/autoload.php';
-
-/**
- * The base configuration for WordPress
- *
- * @link https://codex.wordpress.org/Editing_wp-config.php
- *
- * @package WordPress
- */
-Setup::init(__DIR__)->config(); // production
+require_once __FILE__ . '/app.php';
 
 /**
  * WordPress Database Table prefix.
