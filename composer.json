@@ -12,6 +12,16 @@
 		"wpackagist-theme/hello-elementor": "*",
         "wpackagist-theme/twentytwentythree": "*"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
     "extra": {
         "wordpress-install-dir": "public/wp",
         "installer-paths": {
