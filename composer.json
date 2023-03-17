@@ -6,7 +6,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "devuri/wp-env-config": "dev-master"
+        "devuri/wp-env-config": "dev-master",
+        "wpackagist-plugin/query-monitor": "*",
+		"wpackagist-plugin/email-log": "*",
+		"wpackagist-theme/hello-elementor": "*",
+        "wpackagist-theme/twentytwentythree": "*"
     },
     "extra": {
         "wordpress-install-dir": "public/wp",
