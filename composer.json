@@ -1,39 +1,39 @@
 {
-    "name": "devuri/wp-env-app",
-    "type": "project",
-    "license": "MIT",
-    "description": "A base WordPress project to create web applications using environment variables.",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "devuri/wp-env-config": "dev-master",
-        "wpackagist-plugin/query-monitor": "*",
-		"wpackagist-plugin/email-log": "*",
-		"wpackagist-theme/hello-elementor": "*",
-        "wpackagist-theme/twentytwentythree": "*"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org",
-            "only": [
-                "wpackagist-plugin/*",
-                "wpackagist-theme/*"
-            ]
-        }
-    ],
-    "extra": {
-        "wordpress-install-dir": "public/wp",
-        "installer-paths": {
-            "public/content/mu-plugins/{$name}/": [
-                "type:wordpress-muplugin"
-            ],
-            "public/content/plugins/{$name}/": [
-                "type:wordpress-plugin"
-            ],
-            "public/content/themes/{$name}/": [
-                "type:wordpress-theme"
-            ]
-        }
-    }
+   "name":"devuri/wp-env-app",
+   "type":"project",
+   "license":"MIT",
+   "description":"A base WordPress project to create web applications using environment variables.",
+   "minimum-stability":"dev",
+   "prefer-stable":true,
+   "require":{
+      "devuri/wp-env-config":"dev-master",
+      "wpackagist-plugin/query-monitor":"*",
+      "wpackagist-plugin/email-log":"*",
+      "wpackagist-theme/hello-elementor":"*",
+      "wpackagist-theme/twentytwentythree":"*"
+   },
+   "repositories":[
+      {
+         "type":"composer",
+         "url":"https://wpackagist.org",
+         "only":[
+            "wpackagist-plugin/*",
+            "wpackagist-theme/*"
+         ]
+      }
+   ],
+   "extra":{
+      "wordpress-install-dir":"public/wp",
+      "installer-paths":{
+         "public/content/mu-plugins/{$name}/":[
+            "type:wordpress-muplugin"
+         ],
+         "public/content/plugins/{$name}/":[
+            "type:wordpress-plugin"
+         ],
+         "public/content/themes/{$name}/":[
+            "type:wordpress-theme"
+         ]
+      }
+   }
 }
