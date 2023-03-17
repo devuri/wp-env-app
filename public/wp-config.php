@@ -2,7 +2,7 @@
 
 use DevUri\Config\Setup;
 
-require_once __FILE__ . '/app.php';
+require_once dirname( __DIR__ ) . '/app.php';
 
 /**
  * WordPress Database Table prefix.
@@ -19,3 +19,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Sets up WordPress.
 require_once ABSPATH . 'wp-settings.php';
+
