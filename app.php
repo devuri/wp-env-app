@@ -8,6 +8,20 @@ if ( file_exists( \dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
     exit("Cant find the vendor autoload file.");
 }
 
+
+/**
+ * define public web root dir.
+ */
+define('PUBLIC_WEB_ROOT', __DIR__ . '/public');
+
+// Custom Directory PATH.
+define('APP_DIR', '/content' );
+define('WP_CONTENT_DIR', PUBLIC_WEB_ROOT . APP_DIR );
+
+// Custom Content Directory URL.
+define('CONTENT_DIR', APP_DIR );
+define('WP_CONTENT_URL', env('WP_HOME') . CONTENT_DIR );
+
 /**
  * The base configuration for WordPress
  *
