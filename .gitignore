@@ -1,8 +1,11 @@
 node_modules/
 tmp/
+public/assets/dist/
+public/assets/mix.js.map
+public/assets/mix-manifest.json
+
+build/deploy/
 vendor/
-wordpress/
-wp-content/
 composer.lock
 
 public/wp/uploads/*
@@ -12,8 +15,17 @@ public/wp/*
 !public/wp/.gitkeep
 
 public/content/*
+public/app/*
 !public/content/.gitkeep
 !public/content/.htaccess
+
+public/plugins/*
+!public/plugins/.gitkeep
+!public/plugins/core
+
+public/mu-plugins/*
+!public/mu-plugins/.gitkeep
+!public/mu-plugins/apt9.php
 
 report/
 .wp-develop/
