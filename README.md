@@ -59,3 +59,9 @@ $http_app = new Kernel( __DIR__, [
     'default_theme' => 'brisko',
 ] );
 ```
+### Configuration
+**Error handler:** the framework allows for the use of oops or symfony.
+The default error handler is symfony, to change the handler use `init(['errors' => 'oops'])`
+to disable the handlers completely use `init(['errors' => null])`
+> error handlers only run in 'debug', 'development' or 'local'.
+
