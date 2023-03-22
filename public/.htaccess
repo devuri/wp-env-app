@@ -1,0 +1,43 @@
+# AuthName "Demo Mode"
+# AuthType Basic
+# AuthUserFile /srv/users/example/apps/myapp/_htpass/.htpasswd
+# Require valid-user
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Block WordPress xmlrpc.php
+<Files xmlrpc.php>
+	order deny,allow
+	deny from all
+</Files>
+
+Options All -Indexes
+<FilesMatch "^(readme.*|license.*|composer.*|wp-config.php|README.*)$">
+    order allow,deny
+    deny from all
+</FilesMatch>
+
+<files wp-config.php>
+	Order allow,deny
+	Deny from all
+</files>
+
+# block user enumeration
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} ^author=([0-9]*)
+RewriteRule .* https://example.com/? [L,R=302]
+</IfModule>
