@@ -16,13 +16,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-
 # END WordPress
 
 # Block WordPress xmlrpc.php
 <Files xmlrpc.php>
-	order deny,allow
-	deny from all
+  order deny,allow
+  deny from all
 </Files>
 
 Options All -Indexes
@@ -32,8 +31,8 @@ Options All -Indexes
 </FilesMatch>
 
 <files wp-config.php>
-	Order allow,deny
-	Deny from all
+    Order allow,deny
+    Deny from all
 </files>
 
 # block user enumeration
