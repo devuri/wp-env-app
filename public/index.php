@@ -13,13 +13,8 @@
  */
 define( 'WP_USE_THEMES', true );
 
-// maintenance.
-if ( defined('HTTP_ENV_DOWN') && true === HTTP_ENV_DOWN ) {
-    require dirname(__DIR__) . '/storage/maintenance.php'; exit;
-}
-
 if ( file_exists( __DIR__ . '/wp/wp-blog-header.php' ) ) {
 	require __DIR__ . '/wp/wp-blog-header.php';
 } else {
-    exit("Looks like apt9 is not setup run setup to install.");
+    exit("Looks like framework is not setup, run setup to install.");
 }
