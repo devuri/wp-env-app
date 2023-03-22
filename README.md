@@ -34,7 +34,7 @@ By default the project web root is set to `public` to change this to something o
 > composer.json
 ```shell
    "extra":{
-      "wordpress-install-dir":"public/wp",
+      "wordpress-install-dir":"public_html/wp",
       "installer-paths":{
          "public_html/app/mu-plugins/{$name}/":[
             "type:wordpress-muplugin"
