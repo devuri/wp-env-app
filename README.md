@@ -29,3 +29,33 @@ DB_PASSWORD=
 DB_HOST=localhost
 DB_PREFIX=wp_
 ```
+### Modify Web Root
+By default the project web root is set to `public` to change this to something other than public edit `app.php` and `composer.json`, for example lets assume our web root is `public_html`
+> composer.json
+```shell
+   "extra":{
+      "wordpress-install-dir":"public/wp",
+      "installer-paths":{
+         "public_html/app/mu-plugins/{$name}/":[
+            "type:wordpress-muplugin"
+         ],
+         "public_html/app/plugins/{$name}/":[
+            "type:wordpress-plugin"
+         ],
+         "public_html/app/themes/{$name}/":[
+            "type:wordpress-theme"
+         ]
+      }
+   }
+```
+
+> and then in app.php
+```php
+$http_app = new Kernel( __DIR__, [
+    'web_root'      => 'public_html',
+    'content_dir'   => 'app',
+    'plugin_dir'    => 'app/plugins',
+    'mu_plugin_dir' => 'app/mu-plugins',
+    'default_theme' => 'brisko',
+] );
+```
