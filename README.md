@@ -46,7 +46,7 @@ By default the project web root is set to `public` to change this to something o
          "public_html/app/plugins/{$name}/":[
             "type:wordpress-plugin"
          ],
-         "public_html/app/themes/{$name}/":[
+         "public_html/template/{$name}/":[
             "type:wordpress-theme"
          ]
       }
