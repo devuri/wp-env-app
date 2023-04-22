@@ -17,7 +17,7 @@ In this file, define the environment variables you wish to use as configuration 
 WP_HOME='http://example.com'
 WP_SITEURL="${WP_HOME}/wp"
 
-USE_APP_THEME=false
+USE_APP_THEME=true
 WP_ENVIRONMENT_TYPE='debug'
 DEVELOPER_ADMIN='0'
 
