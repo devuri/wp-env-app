@@ -32,8 +32,8 @@ if ( file_exists( \dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 $http_app = new Kernel( __DIR__, [
     'web_root'      => 'public',
     'content_dir'   => 'app',
-    'plugin_dir'    => 'app/plugins',
-    'mu_plugin_dir' => 'app/mu-plugins',
+    'plugin_dir'    => 'plugins',
+    'mu_plugin_dir' => 'mu-plugins',
     'default_theme' => 'brisko',
 ] );
 
