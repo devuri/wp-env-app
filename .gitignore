@@ -25,6 +25,7 @@ public/plugins/*
 
 public/mu-plugins/*
 !public/mu-plugins/.gitkeep
+!public/mu-plugins/compose.php
 
 report/
 .wp-develop/
