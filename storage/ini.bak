@@ -1,0 +1,25 @@
+; PHP INI configuration file
+
+; error reporting
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+display_errors = Off
+log_errors = On
+error_log = /var/log/php_errors.log
+
+; performance
+max_execution_time = 90
+memory_limit = 512M
+opcache.enable = 1
+opcache.enable_cli = 0
+opcache.memory_consumption = 256M
+opcache.interned_strings_buffer = 16
+
+; security
+allow_url_fopen = Off
+register_globals = Off
+magic_quotes_gpc = Off
+expose_php = Off
+
+; file uploads
+upload_max_filesize = 1024M
+post_max_size = 1024M
