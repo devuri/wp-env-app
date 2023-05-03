@@ -25,13 +25,13 @@
    "extra":{
       "wordpress-install-dir":"public/wp",
       "installer-paths":{
-         "public/app/mu-plugins/{$name}/":[
+         "public/mu-plugins/{$name}/":[
             "type:wordpress-muplugin"
          ],
-         "public/app/plugins/{$name}/":[
+         "public/plugins/{$name}/":[
             "type:wordpress-plugin"
          ],
-         "public/app/themes/{$name}/":[
+         "public/templates/{$name}/":[
             "type:wordpress-theme"
          ]
       }

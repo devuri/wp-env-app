@@ -16,8 +16,8 @@ public/wp/*
 
 public/content/*
 public/app/*
-!public/content/.gitkeep
-!public/content/.htaccess
+!public/app/.gitkeep
+!public/app/.htaccess
 
 public/plugins/*
 !public/plugins/.gitkeep
@@ -25,7 +25,6 @@ public/plugins/*
 
 public/mu-plugins/*
 !public/mu-plugins/.gitkeep
-!public/mu-plugins/apt9.php
 
 report/
 .wp-develop/
