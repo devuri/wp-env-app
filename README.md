@@ -1,6 +1,8 @@
 # wp-env-app
 A base WordPress project to create web applications using environment variables.
 
+⚠️ Work in progress ⚠️
+
 ### Installation
 
 To use `wp-env-app`, you can install it via Composer. Run the following command in your terminal:
