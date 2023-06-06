@@ -34,7 +34,7 @@ if ( ! \defined( 'ABSPATH' ) ) {
  * that should always be active which makes this hook a good place to add critical functionality
  * @var [type]
  */
-do_action( 'web_app_config' );
+do_action( 'web_app_config', get_http_env() );
 
 // plugin.
 DevUri\Config\App\Core\Plugin::init();
