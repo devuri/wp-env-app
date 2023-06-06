@@ -27,7 +27,13 @@ if ( ! \defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// ready.
+/**
+ * Must-use plugins are loaded before normal plugins.
+ *
+ * Must-use plugins are typically used for critical functionality or site-wide customizations
+ * that should always be active which makes this hook a good place to add critical functionality
+ * @var [type]
+ */
 do_action( 'web_app_config' );
 
 // plugin.
