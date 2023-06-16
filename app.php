@@ -2,71 +2,100 @@
 
 use DevUri\Config\Kernel;
 
-/*
- * This is the bootstrap file for the web application.
- *
- * It loads the necessary files and sets up the environment for the application to run.
- * This includes initializing the Composer autoloader, which is used to load classes and packages.
- *
- * The application uses Composer to manage dependencies and packages including WordPress themes and plugins, which allows you to easily add, update, and remove packages as needed.
- * To install or update packages, you can use the `composer` command line.
- *
- * IMPORTANT: Do NOT modify this file unless you are sure of what you are doing.
- * Any changes you make to this file may affect the behavior of the entire application and cause errors or unexpected behavior.
- * If you are unsure about how to modify the application, please refer to the documentation or seek assistance from a qualified developer.
- *
- * To modify the setup, please refer to the documentation for instructions.
- *
- */
-if ( file_exists( \dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
-    require_once \dirname( __FILE__ ) . '/vendor/autoload.php';
-} else {
-    exit("Cant find the vendor autoload file.");
-}
-
 /**
  * Start the web application.
  *
  * @var Kernel
  */
-$http_app = new Kernel( __DIR__, [
-    'web_root'      => 'public',
-    'content_dir'   => 'app',
-    'plugin_dir'    => 'plugins',
+$http_app = new Kernel(__DIR__, [
+
+    /**
+     * Web Root: the public web directory, we can change this to 'web' or 'html' etc.
+     *
+     * By default the project web root is set to public if we change this to something other than public
+     * we will also need to edit composer.json, for example lets assume our web root is public_html
+     *
+     * "wordpress-install-dir":"public_html/wp",
+     *  "installer-paths":{
+     *     "public_html/app/mu-plugins/{$name}/":[
+     *        "type:wordpress-muplugin"
+     *     ],
+     *     "public_html/app/plugins/{$name}/":[
+     *        "type:wordpress-plugin"
+     *     ],
+     *     "public_html/template/{$name}/":[
+     *        "type:wordpress-theme"
+     *     ]
+     */
+    'web_root' => 'public',
+
+    /**
+     * Sets the content directory for the project.
+     *
+     * By default, the project uses the 'app' directory as the content directory.
+     * The 'app' directory is equivalent to the 'wp-content' directory.
+     * However, this can be modified to use a different directory, such as 'content'.
+     */
+    'content_dir' => 'app',
+
+    /**
+     * Sets the plugins directory.
+     *
+     * The plugins directory is located outside the project directory and
+     * allows for installation and management of plugins using Composer.
+     */
+    'plugin_dir' => 'plugins',
+
+    /**
+     * Sets the directory for Must-Use (MU) plugins.
+     *
+     * The MU plugins directory is used to include custom logic that is considered essential for the project.
+     * It provides a way to include functionality that should always be active and cannot be deactivated by site administrators.
+     *
+     * By default, the framework includes the 'compose' MU plugin, which includes the 'web_app_config' hook.
+     * This hook can be leveraged to configure the web application in most cases.
+     */
     'mu_plugin_dir' => 'mu-plugins',
+
+    /**
+     * Sets the default fallback theme for the project.
+     *
+     * By default, WordPress uses one of the "twenty*" themes as the fallback theme.
+     * However, in our project, we have the flexibility to define our own custom fallback theme.
+     */
     'default_theme' => 'brisko',
+
+    /**
+     * Controls whether we can deactivate plugins.
+     *
+     * This setting determines whether the option to deactivate plugins is available.
+     * Setting it to false will hide the control to deactivate plugins,
+     * but it does not remove the functionality itself.
+     *
+     * Setting it to true brings back the ability to deactivate plugins.
+     * The default setting is true.
+     */
     'can_deactivate' => false,
- 	'theme_dir' => 'templates',
-] );
 
-/*
- * Load constant overrides.
- *
- * This will load constant values that override constants defined in setup.
- */
-$http_app->overrides();
+    /**
+     * Sets the directory for additional themes.
+     *
+     * In addition to the default 'themes' directory, we can utilize the 'templates' directory
+     * to include our own custom themes for the project. This provides flexibility and allows
+     * us to have a separate location for our custom theme files.
+     */
+    'theme_dir' => 'templates',
 
-/*
- * Configuration settings for your web application.
- *
- * We recommend using the .env file to set these values.
- * The possible values are: 'debug', 'development', 'staging', 'production', or 'secure'.
- * The web application will use either the value of WP_ENVIRONMENT_TYPE or 'production'.
- *
- * Error handler: the framework allows for the use of oops or symfony.
- * The default error handler is symfony, to change the handler use `init(['errors' => 'oops'])`
- * to disable the handlers completely use `init(['errors' => null])`
- * error handler only run in 'debug', 'development' or 'local'.
- *
- * If you want to set the environment to 'development', add the following to your .env
- * WP_ENVIRONMENT_TYPE=development
- */
-$http_app->init();
+    /**
+     * Sets the error handler for the project.
+     *
+     * The framework provides options for using either Oops or Symfony as the error handler.
+     * By default, the Symfony error handler is used.
+     * To change the error handler, set the 'error_handler' option to 'oops'.
+     * To disable the error handlers completely, set the 'error_handler' option to null.
+     *
+     * Please note that the error handler will only run in 'debug', 'development', or 'local' environments.
+     */
+    'error_handler' => null,
 
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
- */
-$table_prefix = env('DB_PREFIX');
+]);
