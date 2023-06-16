@@ -35,6 +35,8 @@ $http_app = new Kernel( __DIR__, [
     'plugin_dir'    => 'plugins',
     'mu_plugin_dir' => 'mu-plugins',
     'default_theme' => 'brisko',
+    'can_deactivate' => false,
+ 	'theme_dir' => 'templates',
 ] );
 
 /*
