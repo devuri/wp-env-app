@@ -83,13 +83,13 @@ By default the project web root is set to `public` to change this to something o
 
 > and then in app.php
 ```php
-$http_app = new Kernel( __DIR__, [
+return [
     'web_root'      => 'public_html', // web root is now set as public_html
     'content_dir'   => 'app',
     'plugin_dir'    => 'app/plugins',
     'mu_plugin_dir' => 'app/mu-plugins',
     'default_theme' => 'brisko',
-] );
+];
 ```
 ## Configuration
 **Error handler:** the framework allows for the use of oops or symfony.
