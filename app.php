@@ -1,33 +1,52 @@
 <?php
 
-use DevUri\Config\Kernel;
-
 /**
  * Start the web application.
  *
  * @var Kernel
  */
-$http_app = new Kernel(__DIR__, [
+$http_app = new DevUri\Config\Kernel(__DIR__, [
 
-    /**
-     * Web Root: the public web directory, we can change this to 'web' or 'html' etc.
-     *
-     * By default the project web root is set to public if we change this to something other than public
-     * we will also need to edit composer.json, for example lets assume our web root is public_html
-     *
-     * "wordpress-install-dir":"public_html/wp",
-     *  "installer-paths":{
-     *     "public_html/app/mu-plugins/{$name}/":[
-     *        "type:wordpress-muplugin"
-     *     ],
-     *     "public_html/app/plugins/{$name}/":[
-     *        "type:wordpress-plugin"
-     *     ],
-     *     "public_html/template/{$name}/":[
-     *        "type:wordpress-theme"
-     *     ]
-     */
-    'web_root' => 'public',
+	/**
+	 * Web Root: the public web directory.
+	 *
+	 * By default, the project's web root is set to "public". If you change this to something other than "public",
+	 * you will also need to edit the composer.json file. For example, if our web root is "public_html", the relevant
+	 * composer.json entries would be:
+	 *
+	 * "wordpress-install-dir": "public_html/wp",
+	 * "installer-paths": {
+	 *     "public_html/app/mu-plugins/{$name}/": [
+	 *         "type:wordpress-muplugin"
+	 *     ],
+	 *     "public_html/app/plugins/{$name}/": [
+	 *         "type:wordpress-plugin"
+	 *     ],
+	 *     "public_html/template/{$name}/": [
+	 *         "type:wordpress-theme"
+	 *     ]
+	 * }
+	 */
+	'web_root' => 'public',
+
+	/**
+	 * Global assets directory.
+	 *
+	 * This configuration allows us to define a directory for globally accessible assets.
+	 * If we are using build tools like webpack, mix, vite, etc., this directory can be used to store compiled assets.
+	 * The path is relative to the `web_root` setting, so if our web root is `public`, assets would be in `public/assets`.
+	 *
+	 * The asset URL can be configured by setting the ASSET_URL in your .env file.
+	 *
+	 * Global helpers can be used in the web application to interact with these assets:
+	 *
+	 * - asset($asset): Returns the full URL of the asset. The $asset parameter is the path to the asset, e.g., "/images/thing.png".
+	 *   Example: asset("/images/thing.png") returns "https://example.com/assets/dist/images/thing.png".
+	 *
+	 * - asset_url($path): Returns the asset URL without the filename. The $path parameter is the path to the asset.
+	 *   Example: asset_url("/dist") returns "https://example.com/assets/dist/".
+	 */
+	'asset_dir' => 'assets',
 
     /**
      * Sets the content directory for the project.
@@ -57,6 +76,19 @@ $http_app = new Kernel(__DIR__, [
      */
     'mu_plugin_dir' => 'mu-plugins',
 
+	/**
+	 * SQLite Configuration
+	 *
+	 * WordPress supports SQLite via a plugin (which might soon be included in core).
+	 * These options need to be set when using the drop-in SQLite database with WordPress.
+	 * The SQLite database location and filename can be configured here.
+	 * The `sqlite_dir` directory is relative to `APP_PATH`.
+	 *
+	 * @see https://github.com/aaemnnosttv/wp-sqlite-db
+	 */
+	'sqlite_dir'  => 'sqlitedb',
+	'sqlite_file' => '.sqlite-wpdatabase',
+
     /**
      * Sets the default fallback theme for the project.
      *
@@ -64,6 +96,14 @@ $http_app = new Kernel(__DIR__, [
      * However, in our project, we have the flexibility to define our own custom fallback theme.
      */
     'default_theme' => 'brisko',
+
+	/**
+	 * Disable WordPress updates.
+	 *
+	 * Since we will manage updates with Composer,
+	 * it is recommended to disable all updates within WordPress.
+	 */
+	'disable_updates' => true,
 
     /**
      * Controls whether we can deactivate plugins.
@@ -99,3 +139,14 @@ $http_app = new Kernel(__DIR__, [
     'error_handler' => null,
 
 ]);
+
+/**
+ * Bootstrap the Web Application Framework
+ *
+ * This returns the web application instance.
+ *
+ * IMPORTANT: Do NOT modify this section of the file unless you have a clear understanding of its purpose.
+ * Any changes made to this file may impact the behavior of the entire application, resulting in errors or unexpected behavior.
+ *
+ */
+return $http_app;

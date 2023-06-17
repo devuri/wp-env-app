@@ -27,7 +27,7 @@ if ( file_exists( \dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
  *
  * @var Kernel
  */
-require_once \dirname( __FILE__ ) . '/app.php';
+$http_app = require_once \dirname( __FILE__ ) . '/app.php';
 
 /*
  * Load constant overrides.
