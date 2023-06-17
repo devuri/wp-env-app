@@ -16,8 +16,8 @@
  * To modify the setup, please refer to the documentation for instructions.
  *
  */
-if ( file_exists( \dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
-    require_once \dirname( __FILE__ ) . '/vendor/autoload.php';
+if (file_exists(\dirname(__FILE__) . "/vendor/autoload.php")) {
+    require_once \dirname(__FILE__) . "/vendor/autoload.php";
 } else {
     exit("Cant find the vendor autoload file.");
 }
@@ -27,7 +27,7 @@ if ( file_exists( \dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
  *
  * @var Kernel
  */
-$http_app = wpc_app( __DIR__ );
+$http_app = wpc_app(__DIR__);
 
 /*
  * Load constant overrides.
@@ -59,4 +59,4 @@ $http_app->init();
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = env('DB_PREFIX');
+$table_prefix = env("DB_PREFIX");
