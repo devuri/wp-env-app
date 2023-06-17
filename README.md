@@ -44,15 +44,20 @@ Customize the configuration options in the `app.php` file located in the root di
 The `app.php` file contains various configuration options that you can customize based on your project requirements. Here's an overview of the available options:
 
 - `web_root`: Sets the public web directory (default: `public`).
+- `asset_dir`: Sets the global assets directory (default: `assets`).
 - `content_dir`: Sets the content directory for the project (default: `app`).
-- `plugin_dir`: Sets the plugins directory (default: `plugins`).
+- `plugin_dir`: Sets the directory for installing and managing plugins (default: `plugins`).
 - `mu_plugin_dir`: Sets the directory for Must-Use (MU) plugins (default: `mu-plugins`).
-- `default_theme`: Sets the default fallback theme for the project (default: `brisko`).
-- `can_deactivate`: Controls whether we can deactivate plugins (default: `false`).
+- `sqlite_dir`: Sets the directory for the SQLite database (default: `sqlitedb`).
+- `sqlite_file`: Sets the filename for the SQLite database (default: `.sqlite-wpdatabase`).
+- `default_theme`: Sets the default fallback theme (default: `brisko`).
+- `disable_updates`: Disables WordPress updates (default: `true`).
+- `can_deactivate`: Controls whether plugins can be deactivated (default: `false`).
 - `theme_dir`: Sets the directory for additional themes (default: `templates`).
-- `error_handler`: Sets the error handler for the project (default: `null`).
+- `error_handler`: Sets the error handler for the project (default: Symfony error handler).
 
 Feel free to modify these options as needed to fit your project's directory structure and requirements.
+> **IMPORTANT**: Do NOT modify the bootstrap section of the file unless you fully understand its purpose. Any changes made to this section can impact the behavior of the entire application and lead to errors or unexpected behavior.
 
 ## Additional Customization
 
