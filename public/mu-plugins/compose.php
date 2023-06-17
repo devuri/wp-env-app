@@ -14,7 +14,7 @@
  * Version:           0.0.1
  * Requires at least: 5.3.0
  * Requires PHP:      7.3.5
- * Author:            Uriel Wilson
+ * Author:            Uriel
  * Author URI:        https://urielwilson.com
  * Text Domain:       compose
  * Domain Path:       languages

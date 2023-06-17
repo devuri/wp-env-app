@@ -1,7 +1,5 @@
 <?php
 
-use DevUri\Config\Setup;
-
 require_once dirname( __DIR__ ) . '/bootstrap.php';
 
 /**
