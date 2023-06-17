@@ -57,7 +57,7 @@ The `app.php` file contains various configuration options that you can customize
 - `error_handler`: Sets the error handler for the project (default: Symfony error handler).
 
 Feel free to modify these options as needed to fit your project's directory structure and requirements.
-> **IMPORTANT**: Do NOT modify the bootstrap section of the file unless you fully understand its purpose. Any changes made to this section can impact the behavior of the entire application and lead to errors or unexpected behavior.
+> **IMPORTANT**: Do NOT modify the bootstrap file unless you fully understand its purpose. Any changes made to the bootstrap file can impact the behavior of the entire application and lead to errors or unexpected behavior.
 
 ## Additional Customization
 
