@@ -1,11 +1,6 @@
 <?php
 
-/**
- * Start the web application.
- *
- * @var Kernel
- */
-$http_app = new DevUri\Config\Kernel(__DIR__, [
+return [
 
 	/**
 	 * Web Root: the public web directory.
@@ -138,15 +133,4 @@ $http_app = new DevUri\Config\Kernel(__DIR__, [
      */
     'error_handler' => null,
 
-]);
-
-/**
- * Bootstrap the Web Application Framework
- *
- * This returns the web application instance.
- *
- * IMPORTANT: Do NOT modify this section of the file unless you have a clear understanding of its purpose.
- * Any changes made to this file may impact the behavior of the entire application, resulting in errors or unexpected behavior.
- *
- */
-return $http_app;
+];
