@@ -91,7 +91,7 @@ return [
     'default_theme' => 'brisko',
 ];
 ```
-## Configuration
+## Errors
 **Error handler:** the framework allows for the use of oops or symfony.
 
 The framework provides options for using either Oops or Symfony as the error handler.
