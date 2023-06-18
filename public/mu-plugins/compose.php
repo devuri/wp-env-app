@@ -37,4 +37,4 @@ if ( ! \defined( 'ABSPATH' ) ) {
 do_action( 'web_app_config', get_http_env() );
 
 // plugin.
-DevUri\Config\App\Core\Plugin::init();
+wpc_app_config_core();
