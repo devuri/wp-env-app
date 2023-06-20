@@ -134,3 +134,18 @@ Here's an example composer.json file that includes both the wpackagist repositor
 
 ```
 Read this guide on how to setup private repos with your project: https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub
+
+### github-oauth
+
+To create a new access token, head to your token settings:https://github.com/settings/tokens section on Github and generate a new token.
+
+```shell
+# auth.json
+{
+    "github-oauth": {
+        "github.com": "token"
+    }
+}
+```
+
+> https://getcomposer.org/doc/articles/authentication-for-private-packages.md#github-oauth
