@@ -1,4 +1,10 @@
 # AuthName "Demo Mode"
+<files .htaccess>
+Order allow,deny
+Deny from all
+</files>
+
+# AuthName "Demo Mode"
 # AuthType Basic
 # AuthUserFile /srv/users/example/apps/myapp/_htpass/.htpasswd
 # Require valid-user
@@ -17,6 +23,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
+
+# custom error messages
+ErrorDocument 403 "No Access permission."
 
 # Block WordPress xmlrpc.php
 <Files xmlrpc.php>
@@ -39,4 +48,16 @@ Options All -Indexes
 <IfModule mod_rewrite.c>
 RewriteCond %{QUERY_STRING} ^author=([0-9]*)
 RewriteRule .* https://example.com/? [L,R=302]
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+Header set Access-Control-Allow-Origin www.google-analytics.com
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+Header set Content-Security-Policy "script-src 'self' *.example.com www.google-analytics.com *.google-analytics.com *.googlesyndication.com *.google.com *.google.com *.quantcount.com *.facebook.net *.gubagoo.io .hotjar.com *.gstatic.com *.inspectlet.com *.pingdom.net *.twitter.com *.quantserve.com *.googletagservices.com *.googleapis.com *.gubagoo.io 'unsafe-inline';"
+Header set X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options nosniff
+Header set Content-Security-Policy: "frame-ancestors 'self' https://example.com"
+Header set X-XSS-Protection "1; mode=block;"
+Header set Referrer-Policy "same-origin"
 </IfModule>

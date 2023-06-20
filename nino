@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+} else {
+    exit("Cant find the vendor autoload file.");
+}
+
+// activate console.
+( new Urisoft\App\Console\Nino( __DIR__ ) )->load();
