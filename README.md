@@ -102,3 +102,35 @@ To disable the error handlers completely, set the `error_handler` option to `nul
 
 > Please note that the error handler will only run in 'debug', 'development', or 'local' environments.
 
+## Using auth.json for Private Repository
+
+Here's an example composer.json file that includes both the wpackagist repository and a private repository:
+
+```shell
+{
+  "name": "your-project-name",
+  "description": "Your project description",
+  "require": {
+    "wpackagist-plugin/woocommerce": "^5.5",
+    "wpackagist-theme/twentytwenty": "^1.9",
+    "<GITHUB_USERNAME>/<REPO_NAME_1>": "^1.0",
+    "<GITHUB_USERNAME>/<REPO_NAME_2>": "^2.0"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/<GITHUB_USERNAME>/<REPO_NAME_1>"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/<GITHUB_USERNAME>/<REPO_NAME_2>"
+    }
+  ]
+}
+
+```
+Read this guide on how to setup private repos with your project: https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub
