@@ -55,9 +55,10 @@ The `app.php` file contains various configuration options that you can customize
 - `can_deactivate`: Controls whether plugins can be deactivated (default: `false`).
 - `theme_dir`: Sets the directory for additional themes (default: `templates`).
 - `error_handler`: Sets the error handler for the project (default: Symfony error handler).
+- `config_file`: Sets the name for the project config overrides file (default: config).
 
 Feel free to modify these options as needed to fit your project's directory structure and requirements.
-> **IMPORTANT**: Do NOT modify the bootstrap section of the file unless you fully understand its purpose. Any changes made to this section can impact the behavior of the entire application and lead to errors or unexpected behavior.
+> **IMPORTANT**: Do NOT modify the bootstrap file unless you fully understand its purpose. Any changes made to the bootstrap file can impact the behavior of the entire application and lead to errors or unexpected behavior.
 
 ## Additional Customization
 
@@ -83,15 +84,15 @@ By default the project web root is set to `public` to change this to something o
 
 > and then in app.php
 ```php
-$http_app = new Kernel( __DIR__, [
+return [
     'web_root'      => 'public_html', // web root is now set as public_html
     'content_dir'   => 'app',
     'plugin_dir'    => 'app/plugins',
     'mu_plugin_dir' => 'app/mu-plugins',
     'default_theme' => 'brisko',
-] );
+];
 ```
-## Configuration
+## Errors
 **Error handler:** the framework allows for the use of oops or symfony.
 
 The framework provides options for using either Oops or Symfony as the error handler.

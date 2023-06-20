@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This is the bootstrap file for the web application.
  *
