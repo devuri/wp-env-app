@@ -11,7 +11,7 @@
  *
  * IMPORTANT: Do NOT modify this file unless you are sure of what you are doing.
  * Any changes you make to this file may affect the behavior of the entire application and cause errors or unexpected behavior.
- * If you are unsure about how to modify the application, please refer to the documentation or seek assistance from a qualified developer.
+ * If you are unsure about how to modify the application please refer to the documentation or seek assistance from a qualified developer.
  *
  * To modify the setup, please refer to the documentation for instructions.
  *

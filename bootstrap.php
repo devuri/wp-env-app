@@ -4,7 +4,7 @@
  * This is the bootstrap file for the web application.
  *
  * It loads the necessary files and sets up the environment for the application to run.
- * This includes initializing the Composer autoloader, which is used to load classes and packages.
+ * This includes initializing the Composer autoloader,  which is used to load classes and packages.
  *
  * The application uses Composer to manage dependencies and packages including WordPress themes and plugins, which allows you to easily add, update, and remove packages as needed.
  * To install or update packages, you can use the `composer` command line.
