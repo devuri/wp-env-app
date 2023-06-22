@@ -102,9 +102,9 @@ To disable the error handlers completely, set the `error_handler` option to `nul
 
 > Please note that the error handler will only run in 'debug', 'development', or 'local' environments.
 
-## Using auth.json for Private Repository
-
-Here's an example composer.json file that includes both the wpackagist repository and a private repository:
+## Private Repository
+We can use `auth.json` file to install private themes and plugins hosted on GitHub using Composer.
+> Here's an example composer.json file that includes both the wpackagist repository and a private repository:
 
 ```shell
 {
@@ -133,7 +133,7 @@ Here's an example composer.json file that includes both the wpackagist repositor
 }
 
 ```
-Read this guide on how to setup private repos with your project: https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub
+Read this fully detailed guide on how to setup private repos with your project: https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub
 
 ### github-oauth
 
