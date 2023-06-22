@@ -71,30 +71,30 @@ Here's an overview of the directory structure used:
 
 wp-env-app  allows for additional customization options. Here are some examples:
 
-- **Modify Web Root**: By default, the project web root is set to `public`. To change it to something other than `public`, edit `app.php` and `composer.json`. For example, if the web root is set as `public_html`, update the following sections:
+**Modify Web Root**: By default, the project web root is set to `public`. To change it to something other than `public`, edit `app.php` and `composer.json`. For example, if the web root is set as `public_html`, update the following sections:
 
-    - `composer.json`:
-    ```shell
-       "extra":{
-          "wordpress-install-dir":"public_html/wp",
-          "installer-paths":{
+> composer.json:
 
+```shell
+ "extra":{
+    "wordpress-install-dir": "public_html/wp",
+    "installer-paths": {
+        "public_html/app/mu-plugins/{$name}/": [
+            "type:wordpress-muplugin"
+        ],
+        "public_html/app/plugins/{$name}/": [
+            "type:wordpress-plugin"
+        ],
+        "public_html/template/{$name}/": [
+            "type:wordpress-theme"
+        ]
+    }
+}
+```
 
- "public_html/app/mu-plugins/{$name}/":[
-                "type:wordpress-muplugin"
-             ],
-             "public_html/app/plugins/{$name}/":[
-                "type:wordpress-plugin"
-             ],
-             "public_html/template/{$name}/":[
-                "type:wordpress-theme"
-             ]
-          }
-       }
-    ```
+> app.php:
 
-    - `app.php`:
-    ```php
+```php
     return [
         'web_root'      => 'public_html', // web root is now set as public_html
         'content_dir'   => 'app',
@@ -102,7 +102,7 @@ wp-env-app  allows for additional customization options. Here are some examples:
         'mu_plugin_dir' => 'app/mu-plugins',
         'default_theme' => 'brisko',
     ];
-    ```
+```
 
 ## Configuration
 
@@ -122,7 +122,7 @@ The `app.php` file contains various configuration options that you can customize
 - `error_handler`: Sets the error handler for the project (default: Symfony error handler).
 - `config_file`: Sets the name for the project config overrides file (default: `config`).
 
-Feel free to modify these options as needed to fit your project's directory structure and requirements.
+> Feel free to modify these options as needed to fit your project's directory structure and requirements.
 
 ## Errors
 
@@ -130,7 +130,7 @@ The framework allows for the use of `oops` (whoops) or `Symfony` as the error ha
 
 By default, the Symfony error handler is used. To change the error handler, set the `error_handler` option to `oops`. To disable the error handlers completely, set the `error_handler` option to `null`.
 
-Please note that the error handler will only run in `debug`, `development`, or `local` environments.
+> Please note that the error handler will only run in `debug`, `development`, or `local` environments.
 
 ## Private Repository
 
