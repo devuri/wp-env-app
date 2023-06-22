@@ -181,6 +181,29 @@ You can use the `auth.json` file to install private themes and plugins hosted on
 
 For a fully detailed guide on how to set up private repositories with your project, refer to the [GitHub guide](https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub).
 
+## CI/CD
+We can use a GitHub Actions workflow to automate the deployment process.
+
+```yaml
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
+```
+
+https://github.com/marketplace/actions/ssh-remote-commands
 
 Congratulations! You now have wp-env-app  up and running. Enjoy developing your WordPress web applications with a lightweight and modular framework. Should you have any questions or encounter any issues submit them through the [issue tracker](https://github.com/devuri/wp-env-app/issues).
 
