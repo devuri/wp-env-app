@@ -1,45 +1,110 @@
-# wp-env-app
-A base WordPress project to create web applications using environment variables.
+# WPEnvApp - A Lightweight WordPress Project Framework
+
+A lightweight framework for WordPress. It aims to provide a clean and organized structure for managing WordPress projects, making it easier to develop, deploy, and maintain WordPress websites.
 
 ⚠️ Work in progress ⚠️
 
+## Features
+
+- **Modular Structure**: Promotes a modular approach to WordPress development, allowing you to organize your code into separate modules or packages for better code organization and reusability.
+- **Dependency Management**: With the help of Composer, allows you to manage your WordPress plugins, themes, and libraries effortlessly. It provides a composer.json file to easily include and update dependencies.
+- **Environment Configuration**: Implements the concept of environment-specific configurations using the `.env` file. You can define environment variables for different environments (e.g., development, staging, production) to easily manage database connections, API keys, and other environment-specific settings.
+- **Enhanced Security**: By moving sensitive files outside of the web root directory, it helps improve the security of your WordPress installation. Critical files are stored outside the public directory, preventing direct access.
+- **Version Control Friendly**: Encourages the use of version control systems like Git. By separating core WordPress files from your project files, it makes it easier to manage and track changes to your custom code while excluding WordPress core files from version control.
+- **Modern Development Workflow**: Embraces modern development practices, allowing you to use build tools like Webpack for asset management and build processes. You can easily integrate frontend frameworks or preprocessors into your project for an optimized development workflow.
+
+## Requirements
+
+To use get started, make sure your environment meets the following requirements:
+
+- PHP version 7.4 or higher
+- Composer (https://getcomposer.org)
+
 ## Installation
 
-To use `wp-env-app`, you can install it via Composer. Run the following command in your terminal:
+Run the following command in your terminal:
 
 ```shell
 composer create-project devuri/wp-env-app blog
 ```
-## Usage
 
-To get started, create a `.env` file in the root directory of your project. 
-In this file, define the environment variables you wish to use as configuration constants. For example:
-> update the database credentials and other settings as needed.
-```shell
-WP_HOME='http://example.com'
-WP_SITEURL="${WP_HOME}/wp"
+> or
 
-USE_APP_THEME=true
-WP_ENVIRONMENT_TYPE='debug'
-DEVELOPER_ADMIN='0'
+1. Clone or download the repository to your local development environment.
+2. Install dependencies by running `composer install` in the project root directory.
+3. Rename the `.env.example` file to `.env` and customize it according to your environment settings.
+4. Set up your web server to point to the `public` directory as the document root.
+5. Run the WordPress installation process through your web browser.
+6. Start building your awesome WordPress project!
 
-MEMORY_LIMIT='256M'
-MAX_MEMORY_LIMIT='256M'
+## Folder Structure
 
-FORCE_SSL_ADMIN=false
-FORCE_SSL_LOGIN=false
-
-DB_NAME=wp_dbName
-DB_USER=root
-DB_PASSWORD=
-DB_HOST=localhost
-DB_PREFIX=wp_
+Here's an overview of the directory structure used:
 
 ```
-## Application Customization
-Customize the configuration options in the `app.php` file located in the root directory of the project.
+├── public              # Web server root directory
+│   ├── app             # WordPress core files (excluded from version control)
+│   │   ├── uploads     # WordPress uploads directory
+│   │   └── themes      # WordPress themes directory
+│   ├── mu-plugins      # Must-use plugins directory
+│   ├── plugins         # WordPress plugins directory
+│   ├── templates       # Custom themes directory
+│   ├── wp              # WordPress core files (excluded from version control)
+│   ├── .htaccess       # Web server configuration file
+│   ├── index.php       # WordPress entry point
+│   └── wp-config.php   # WordPress configuration file
+├── storage             # Storage directory for backups, cache, and logs
+│   ├── .backups        # Backup directory
+│   ├── cache           # Cache directory
+│   └── logs            # Logs directory
+│       └── wp-errors   # WordPress error logs
+├── vendor              # Composer dependencies directory
+├── .env                # Environment configuration file
+├── app.php             # Application configuration file
+├── bootstrap.php       # Bootstrap file
+├── composer.json       # Composer configuration file
+└── config.php          # Project configuration file overrides framework constants.
 
-### Configuration
+```
+
+## Additional Customization
+
+wp-env-app  allows for additional customization options. Here are some examples:
+
+- **Modify Web Root**: By default, the project web root is set to `public`. To change it to something other than `public`, edit `app.php` and `composer.json`. For example, if the web root is set as `public_html`, update the following sections:
+
+    - `composer.json`:
+    ```shell
+       "extra":{
+          "wordpress-install-dir":"public_html/wp",
+          "installer-paths":{
+
+
+ "public_html/app/mu-plugins/{$name}/":[
+                "type:wordpress-muplugin"
+             ],
+             "public_html/app/plugins/{$name}/":[
+                "type:wordpress-plugin"
+             ],
+             "public_html/template/{$name}/":[
+                "type:wordpress-theme"
+             ]
+          }
+       }
+    ```
+
+    - `app.php`:
+    ```php
+    return [
+        'web_root'      => 'public_html', // web root is now set as public_html
+        'content_dir'   => 'app',
+        'plugin_dir'    => 'app/plugins',
+        'mu_plugin_dir' => 'app/mu-plugins',
+        'default_theme' => 'brisko',
+    ];
+    ```
+
+## Configuration
 
 The `app.php` file contains various configuration options that you can customize based on your project requirements. Here's an overview of the available options:
 
@@ -55,56 +120,36 @@ The `app.php` file contains various configuration options that you can customize
 - `can_deactivate`: Controls whether plugins can be deactivated (default: `false`).
 - `theme_dir`: Sets the directory for additional themes (default: `templates`).
 - `error_handler`: Sets the error handler for the project (default: Symfony error handler).
-- `config_file`: Sets the name for the project config overrides file (default: config).
+- `config_file`: Sets the name for the project config overrides file (default: `config`).
 
 Feel free to modify these options as needed to fit your project's directory structure and requirements.
-> **IMPORTANT**: Do NOT modify the bootstrap file unless you fully understand its purpose. Any changes made to the bootstrap file can impact the behavior of the entire application and lead to errors or unexpected behavior.
 
-## Additional Customization
-
-### Modify Web Root
-By default the project web root is set to `public` to change this to something other than public edit `app.php` and `composer.json`, for example lets assume our web root is `public_html`
-> composer.json
-```shell
-   "extra":{
-      "wordpress-install-dir":"public_html/wp",
-      "installer-paths":{
-         "public_html/app/mu-plugins/{$name}/":[
-            "type:wordpress-muplugin"
-         ],
-         "public_html/app/plugins/{$name}/":[
-            "type:wordpress-plugin"
-         ],
-         "public_html/template/{$name}/":[
-            "type:wordpress-theme"
-         ]
-      }
-   }
-```
-
-> and then in app.php
-```php
-return [
-    'web_root'      => 'public_html', // web root is now set as public_html
-    'content_dir'   => 'app',
-    'plugin_dir'    => 'app/plugins',
-    'mu_plugin_dir' => 'app/mu-plugins',
-    'default_theme' => 'brisko',
-];
-```
 ## Errors
-**Error handler:** the framework allows for the use of oops or symfony.
 
-The framework provides options for using either Oops or Symfony as the error handler.
-By default, the Symfony error handler is used.
-To change the error handler, set the `error_handler` option to `oops`.
-To disable the error handlers completely, set the `error_handler` option to `null`.
+The framework allows for the use of `oops` (whoops) or `Symfony` as the error handler.
 
-> Please note that the error handler will only run in 'debug', 'development', or 'local' environments.
+By default, the Symfony error handler is used. To change the error handler, set the `error_handler` option to `oops`. To disable the error handlers completely, set the `error_handler` option to `null`.
+
+Please note that the error handler will only run in `debug`, `development`, or `local` environments.
 
 ## Private Repository
-We can use `auth.json` file to install private themes and plugins hosted on GitHub using Composer.
-> Here's an example composer.json file that includes both the wpackagist repository and a private repository:
+
+You can use the `auth.json` file to install private themes and plugins hosted on GitHub etc using Composer. Follow the steps below:
+
+1. Create a new access token on GitHub by going to the token settings: https://github.com/settings/tokens.
+2. Generate a new token with the necessary repository access permissions.
+3. Create an `auth.json` file in the root directory of your project.
+4. Add the following content to the `auth.json` file, replacing `<GITHUB_TOKEN>` with your actual token:
+
+```shell
+{
+    "github-oauth": {
+        "github.com": "<GITHUB_TOKEN>"
+    }
+}
+```
+
+5. In your `composer.json` file, include the private repositories and required packages as shown in the example provided:
 
 ```shell
 {
@@ -133,19 +178,12 @@ We can use `auth.json` file to install private themes and plugins hosted on GitH
 }
 
 ```
-Read this fully detailed guide on how to setup private repos with your project: https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub
 
-### github-oauth
+For a fully detailed guide on how to set up private repositories with your project, refer to the [GitHub guide](https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub).
 
-To create a new access token, head to your token settings:https://github.com/settings/tokens section on Github and generate a new token.
 
-```shell
-# auth.json
-{
-    "github-oauth": {
-        "github.com": "token"
-    }
-}
-```
+Congratulations! You now have wp-env-app  up and running. Enjoy developing your WordPress web applications with a lightweight and modular framework. Should you have any questions or encounter any issues submit them through the [issue tracker](https://github.com/devuri/wp-env-app/issues).
 
-> https://getcomposer.org/doc/articles/authentication-for-private-packages.md#github-oauth
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements. Feel free to fork the repository and submit pull requests to contribute to the project.
