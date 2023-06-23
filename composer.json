@@ -20,6 +20,7 @@
         "wpackagist-plugin/disable-gutenberg": "*",
         "wpackagist-plugin/disable-json-api": "*",
         "wpackagist-plugin/membership-lock": "*",
+        "wpackagist-plugin/snitch": "*",
         "wpackagist-plugin/stream": "*",
         "wpackagist-plugin/wordfence": "*",
         "wpackagist-plugin/worker": "*",
