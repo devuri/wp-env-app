@@ -22,10 +22,12 @@ public/app/*
 
 public/plugins/*
 !public/plugins/.gitkeep
+!public/plugins/.htaccess
 !public/plugins/core
 
 public/mu-plugins/*
 !public/mu-plugins/.gitkeep
+!public/mu-plugins/.htaccess
 !public/mu-plugins/compose.php
 
 report/
