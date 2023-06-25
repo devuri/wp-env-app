@@ -1,4 +1,6 @@
-# AuthName "Demo Mode"
+# Disable directory browsing
+Options -Indexes
+
 <files .htaccess>
 Order allow,deny
 Deny from all
