@@ -35,12 +35,13 @@ ErrorDocument 403 "No Access permission."
   deny from all
 </Files>
 
-Options All -Indexes
+# block access
 <FilesMatch "^(readme.*|license.*|composer.*|wp-config.php|README.*)$">
     order allow,deny
     deny from all
 </FilesMatch>
 
+# block access
 <files wp-config.php>
     Order allow,deny
     Deny from all
@@ -53,13 +54,26 @@ RewriteRule .* https://example.com/? [L,R=302]
 </IfModule>
 
 # Security Headers
-<IfModule mod_headers.c>
-Header set Access-Control-Allow-Origin www.google-analytics.com
-Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
-Header set Content-Security-Policy "script-src 'self' *.example.com www.google-analytics.com *.google-analytics.com *.googlesyndication.com *.google.com *.google.com *.quantcount.com *.facebook.net *.gubagoo.io .hotjar.com *.gstatic.com *.inspectlet.com *.pingdom.net *.twitter.com *.quantserve.com *.googletagservices.com *.googleapis.com *.gubagoo.io 'unsafe-inline';"
-Header set X-Frame-Options SAMEORIGIN
-Header set X-Content-Type-Options nosniff
-Header set Content-Security-Policy: "frame-ancestors 'self' https://example.com"
-Header set X-XSS-Protection "1; mode=block;"
-Header set Referrer-Policy "same-origin"
+# <IfModule mod_headers.c>
+# Header set Access-Control-Allow-Origin www.google-analytics.com
+# Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+# Header set Content-Security-Policy "script-src 'self' *.example.com www.google-analytics.com *.google-analytics.com *.googlesyndication.com *.google.com *.google.com *.quantcount.com *.facebook.net *.gubagoo.io .hotjar.com *.gstatic.com *.inspectlet.com *.pingdom.net *.twitter.com *.quantserve.com *.googletagservices.com *.googleapis.com *.gubagoo.io 'unsafe-inline';"
+# Header set X-Frame-Options SAMEORIGIN
+# Header set X-Content-Type-Options nosniff
+# Header set Content-Security-Policy: "frame-ancestors 'self' https://example.com"
+# Header set X-XSS-Protection "1; mode=block;"
+# Header set Referrer-Policy "same-origin"
+# </IfModule>
+
+# Wordfence WAF
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
 </IfModule>
+<IfModule !mod_authz_core.c>
+	Order deny,allow
+	Deny from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF
