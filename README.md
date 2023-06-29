@@ -37,6 +37,19 @@ composer create-project devuri/wp-env-app blog
 5. Run the WordPress installation process through your web browser.
 6. Start building your awesome WordPress project!
 
+### Ignoring Platform Requirements (CLI Tools)
+
+By default, Composer checks if your system meets the platform requirements defined by the installed dependencies. However, there might be cases where you do not intend to use the CLI tools provided, and therefore, the platform requirements are not relevant.
+
+To bypass the platform requirements check and proceed with installation or updates, you can use the `--ignore-platform-reqs` flag with the Composer commands. For example:
+
+```bash
+composer install --ignore-platform-reqs
+```
+
+Please note that using the `--ignore-platform-reqs` flag should be done with caution, as it may lead to compatibility issues if the dependencies explicitly require certain platforms or extensions. Ensure that you understand the implications before using this flag.
+
+
 ## Folder Structure
 
 Here's an overview of the directory structure used:
