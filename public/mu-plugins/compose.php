@@ -27,6 +27,10 @@ if ( ! \defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if (defined('WP_INSTALLING') && WP_INSTALLING) {
+    return;
+}
+
 /**
  * Must-use plugins are loaded before normal plugins.
  *
