@@ -37,19 +37,6 @@ composer create-project devuri/wp-env-app blog
 5. Run the WordPress installation process through your web browser.
 6. Start building your awesome WordPress project!
 
-### Ignoring Platform Requirements (CLI Tools)
-
-By default, Composer checks if your system meets the platform requirements defined by the installed dependencies. However, there might be cases where you do not intend to use the CLI tools provided, and therefore, the platform requirements are not relevant.
-
-To bypass the platform requirements check and proceed with installation or updates, you can use the `--ignore-platform-reqs` flag with the Composer commands. For example:
-
-```bash
-composer install --ignore-platform-reqs
-```
-
-Please note that using the `--ignore-platform-reqs` flag should be done with caution, as it may lead to compatibility issues if the dependencies explicitly require certain platforms or extensions. Ensure that you understand the implications before using this flag.
-
-
 ## Folder Structure
 
 Here's an overview of the directory structure used:
@@ -66,6 +53,8 @@ Here's an overview of the directory structure used:
 │   ├── .htaccess       # Web server configuration file
 │   ├── index.php       # WordPress entry point
 │   └── wp-config.php   # WordPress configuration file
+├── publickeys          # Public key used for encryption or verification purposes
+│   └── samplekey.pub   # Example key b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
 ├── storage             # Storage directory for backups, cache, and logs
 │   ├── .backups        # Backup directory
 │   ├── cache           # Cache directory
@@ -194,29 +183,6 @@ You can use the `auth.json` file to install private themes and plugins hosted on
 
 For a fully detailed guide on how to set up private repositories with your project, refer to the [GitHub guide](https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub).
 
-## CI/CD
-We can use a GitHub Actions workflow to automate the deployment process.
-
-```yaml
-name: remote ssh command
-on: [push]
-jobs:
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@v0.1.10
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: whoami
-```
-
-https://github.com/marketplace/actions/ssh-remote-commands
 
 Congratulations! You now have wp-env-app  up and running. Enjoy developing your WordPress web applications with a lightweight and modular framework. Should you have any questions or encounter any issues submit them through the [issue tracker](https://github.com/devuri/wp-env-app/issues).
 
