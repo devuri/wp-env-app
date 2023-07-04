@@ -45,10 +45,10 @@ Here's an overview of the directory structure used:
 ├── public              # Web server root directory
 │   ├── app             # WordPress core files (excluded from version control)
 │   │   ├── uploads     # WordPress uploads directory
+│   │   ├── templates   # Custom themes directory
 │   │   └── themes      # WordPress themes directory
 │   ├── mu-plugins      # Must-use plugins directory
 │   ├── plugins         # WordPress plugins directory
-│   ├── templates       # Custom themes directory
 │   ├── wp              # WordPress core files (excluded from version control)
 │   ├── .htaccess       # Web server configuration file
 │   ├── index.php       # WordPress entry point
