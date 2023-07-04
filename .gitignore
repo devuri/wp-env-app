@@ -17,6 +17,7 @@ public/wp/*
 
 public/content/*
 public/app/*
+!public/app/templates/
 !public/app/.gitkeep
 !public/app/.htaccess
 
