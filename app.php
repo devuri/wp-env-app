@@ -26,15 +26,19 @@ return [
      * @var array $security {
      *     An array of security settings.
      *
-     *     @type bool $brute-force           Whether to enable brute force protection.
-     *     @type bool $two-factor            Whether to enable two-factor authentication.
-     *     @type bool $no-pwned-passwords    Whether to check for passwords that have been exposed in data breaches.
-     *     @type array|null $admin-ips       An array of IP addresses allowed for administrative access.
-     *                                      Set to null or an empty array to disable the feature.
-     *                                      Format: ['192.168.000.41', '192.168.000.34']
+     *     @type string|null $encryption_key  Full path to encryption key file (.txt) e.g., 'home/user/etc/.myweb-app-secret'
+     *                                        This will become home/user/etc/.myweb-app-secret.txt.
+     *                                        Set to null if encryption key is not defined.
+     *     @type bool $brute-force            Whether to enable brute force protection.
+     *     @type bool $two-factor             Whether to enable two-factor authentication.
+     *     @type bool $no-pwned-passwords     Whether to check for passwords that have been exposed in data breaches.
+     *     @type array|null $admin-ips        An array of IP addresses allowed for administrative access.
+     *                                        Set to null or an empty array to disable the feature.
+     *                                        Format: ['192.168.000.41', '192.168.000.34']
      * }
      */
     'security'         => [
+        'encryption_key'     => null,
         'brute-force'        => true,
         'two-factor'         => true,
         'no-pwned-passwords' => true,
@@ -264,7 +268,7 @@ return [
      * Setting it to true brings back the ability to deactivate plugins.
      * The default setting is true.
      */
-    'can_deactivate'   => false,
+    'can_deactivate'   => true,
 
     /*
      * Sets the directory for additional themes.
@@ -350,7 +354,7 @@ return [
      * This encoding process ensures that the encoded data remains intact and can be decoded back into its original form when needed.
      *
      * use the command to generate key files: php nino config create-public-key
-     * This will generate a sample key with uuid filename, replace the sample key with you own and add the filename to env file.
+     * This will generate a sample key with uuid filename, replace the sample key with your own and add the filename to env file.
      *
      * @var array $publickey An array containing the UUID of the public key stored as an option in the WordPress options table.
      */
