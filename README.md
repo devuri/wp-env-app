@@ -1,6 +1,6 @@
 # A Lightweight WordPress Project Framework
 
-The WPEnvApp is a lightweight framework for your next WordPress web application. It aims to provide a clean and organized structure for managing WordPress projects, making it easier to develop, deploy, and maintain WordPress websites.
+A lightweight framework for your next WordPress web application. It aims to provide a clean and organized structure for managing WordPress projects, making it easier to develop, deploy, and maintain WordPress websites.
 
 ⚠️ Work in progress ⚠️
 
