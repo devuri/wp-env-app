@@ -70,7 +70,7 @@ Here's an overview of the directory structure used:
 └── config.php          # Project configuration file overrides framework constants.
 
 ```
-Items marked `[-r-r-r]` should be set as `read-only` 
+Items marked `[-r-r-r]` should or can be set as `read-only` 
 >  see [framework directory structure](https://devuri.github.io/wp-env-app/structure/) 
 
 
