@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.5](https://github.com/devuri/wp-env-app/compare/v0.6.4...v0.6.5) (2023-09-08)
+
+
+### Features
+
+* adds a way to check if we are in maintenance mode ([91c1047](https://github.com/devuri/wp-env-app/commit/91c10476ccc9ad794311033a9371ef151171bc0d))
+
 ## [0.6.4](https://github.com/devuri/wp-env-app/compare/v0.6.3...v0.6.4) (2023-07-29)
 
 
