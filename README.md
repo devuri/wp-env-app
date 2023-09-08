@@ -52,9 +52,9 @@ Here's an overview of the directory structure used:
 │   ├── mu-plugins      # Must-use plugins directory
 │   ├── plugins         # WordPress plugins directory
 │   ├── wp              # WordPress core files (excluded from version control)
-│   ├── .htaccess       # Web server configuration file
-│   ├── index.php       # WordPress entry point
-│   └── wp-config.php   # WordPress configuration file
+│   ├── .htaccess       # Web server configuration file [-r-r-r]
+│   ├── index.php       # WordPress entry point [-r-r-r]
+│   └── wp-config.php   # WordPress configuration file [-r-r-r]
 ├── publickeys          # Public key used for encryption or verification purposes
 │   └── samplekey.pub   # Example key b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
 ├── storage             # Storage directory for backups, cache, and logs
@@ -70,6 +70,7 @@ Here's an overview of the directory structure used:
 └── config.php          # Project configuration file overrides framework constants.
 
 ```
+Items marked `[-r-r-r]` should be set as `read-only` 
 >  see [framework directory structure](https://devuri.github.io/wp-env-app/structure/) 
 
 
