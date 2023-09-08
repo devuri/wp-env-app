@@ -13,6 +13,11 @@
  */
 define( 'WP_USE_THEMES', true );
 
+if ( file_exists( __DIR__ . '/.maintenance' ) ) {
+	require_once __DIR__ . '/../storage/maintenance.php';
+	exit();
+}
+
 if ( file_exists( __DIR__ . '/wp/wp-blog-header.php' ) ) {
 	require __DIR__ . '/wp/wp-blog-header.php';
 } else {
