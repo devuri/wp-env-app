@@ -2,9 +2,9 @@
 
 A lightweight framework for your next WordPress web application. It aims to provide a clean and organized structure for managing WordPress projects, making it easier to develop, deploy, and maintain WordPress websites.
 
-> ⚠️ Work in progress ⚠️
-> 
-> This project is currently in active development. If you're interested in using this framework, pull requests and issues are welcome.
+>  **Note**
+>
+> ⚠️ **Work in progress:** This project is currently in active development. If you're interested in using this framework, pull requests and issues are welcome.
 
 ## Features
 
