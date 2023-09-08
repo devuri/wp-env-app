@@ -70,6 +70,8 @@ Here's an overview of the directory structure used:
 └── config.php          # Project configuration file overrides framework constants.
 
 ```
+>  see [framework directory structure](https://devuri.github.io/wp-env-app/structure/) 
+
 
 ## Additional Customization
 
