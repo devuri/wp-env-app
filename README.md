@@ -56,7 +56,6 @@ Update the **WP_HOME** value with the correct URL for your application.
 
 By default, the **BASIC_AUTH_USER** is set to `admin` and **BASIC_AUTH_PASSWORD** is set to `demo`. You can change these values to your preference if you intend to enable basic authentication.
 
-
 ```shell
 WP_HOME='http://example.com'
 WP_SITEURL="${WP_HOME}/wp"
@@ -85,6 +84,16 @@ DB_PREFIX=wp_wmrnhxag_
 ```
 
 > Full list of [Environment Variables](https://devuri.github.io/wp-env-config/env/)
+
+### Fresh WordPress Installation
+
+Once all configuration is complete, you can execute the following command to set up a fresh WordPress installation:
+
+```
+php nino wp:install
+```
+
+Now you're ready to start using the framework with your customized configurations and a fresh WordPress installation.
 
 ### Auto Login
 
