@@ -1,4 +1,4 @@
-# WordPress Framework `app.php` Configuration
+# The Framework `app.php` Configuration
 
 The `app.php` file is an essential part of the Framework, allowing you to customize various configuration options to tailor your project to specific requirements. This provides an overview of the available configuration options and how to use them effectively.
 
