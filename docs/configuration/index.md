@@ -49,7 +49,7 @@ Here's a breakdown of the available configuration options in `app.php`:
 
 - `redis`: Configure Redis settings for caching and performance optimization.
 
-- `publickey` and `publickey_dir`: Define public key settings and directories.
+- `publickey_dir`: Define public key settings and directories.
 
 ## Usage
 
