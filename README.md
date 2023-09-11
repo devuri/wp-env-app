@@ -200,7 +200,6 @@ The `app.php` file contains various configuration options that you can customize
 - `can_deactivate`: Controls whether plugins can be deactivated (default: `false`).
 - `theme_dir`: Sets the directory for additional themes (default: `templates`).
 - `error_handler`: Sets the error handler for the project (default: Symfony error handler).
-- `config_file`: Sets the name for the project config overrides file (default: `config`).
 
 > Feel free to modify these options as needed to fit your project's directory structure and requirements.
 >
