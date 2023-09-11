@@ -203,6 +203,8 @@ The `app.php` file contains various configuration options that you can customize
 - `config_file`: Sets the name for the project config overrides file (default: `config`).
 
 > Feel free to modify these options as needed to fit your project's directory structure and requirements.
+>
+>  Full list of [Configuration Options](https://devuri.github.io/wp-env-config/configuration/)
 
 ## Errors
 
