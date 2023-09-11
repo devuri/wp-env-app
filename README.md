@@ -43,6 +43,8 @@ composer create-project devuri/wp-env-app blog
 
 Here's an overview of the directory structure used:
 
+> You can also check out this basic version with unified directory structure [WordPress web app skeleton](https://github.com/devuri/wp-app-skeleton).
+
 ```
 ├── public              # Web server root directory
 │   ├── app             # WordPress core files (excluded from version control)
