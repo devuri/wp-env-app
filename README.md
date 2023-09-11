@@ -39,29 +39,67 @@ composer create-project devuri/wp-env-app blog
 5. Run the WordPress installation process through your web browser.
 6. Start building your awesome WordPress project!
 
-### Environment Variables Setup
+After the installation process, you will find a new `.env` file in your project directory. This file contains all the necessary environment variables.
 
-To get started, create a `.env` file in the root directory of your project.
-In this file, define the environment variables you wish to use as configuration constants, update the database credentials and other settings as needed.
+### Configuration
+
+Open the `.env` file in a text editor of your choice and make the following configurations:
+
+- **DB_NAME:** Set the name of your database.
+- **DB_USER:** Set the database user.
+- **DB_PASSWORD:** Set the database password.
+- **DB_HOST:** In most cases, this can remain as 'localhost' if you are using the default database host.
+
+Update the **WP_HOME** value with the correct URL for your application. 
+
+> The framework will automatically generate salts and set the **DB_PREFIX**.
+
+By default, the **BASIC_AUTH_USER** is set to `admin` and **BASIC_AUTH_PASSWORD** is set to `demo`. You can change these values to your preference if you intend to enable basic authentication.
+
 
 ```shell
-WP_HOME='https://example.com'
-WP_SITEURL="${WP_HOME}"
+WP_HOME='http://example.com'
+WP_SITEURL="${WP_HOME}/wp"
 
-WP_ENVIRONMENT_TYPE='production'
-DEVELOPER_ADMIN='0'
+BASIC_AUTH_USER='admin'
+BASIC_AUTH_PASSWORD='demo'
+
+USE_APP_THEME=false
+WP_ENVIRONMENT_TYPE='debug'
+BACKUP_PLUGINS=false
+
+SENDGRID_API_KEY=''
+SUDO_ADMIN='1'
 
 MEMORY_LIMIT='256M'
 MAX_MEMORY_LIMIT='256M'
+
+FORCE_SSL_ADMIN=false
+FORCE_SSL_LOGIN=false
 
 DB_NAME=wp_dbName
 DB_USER=root
 DB_PASSWORD=
 DB_HOST=localhost
-DB_PREFIX=wp_
+DB_PREFIX=wp_wmrnhxag_
 ```
 
 > Full list of [Environment Variables](https://devuri.github.io/wp-env-config/env/)
+
+### Auto Login
+
+The framework supports auto login via the command-line interface (CLI) command `wp:login`. This command will provide you with a signed URL for logging in. It relies on the `WPENV_AUTO_LOGIN_SECRET_KEY` defined in the `.env` file.
+
+To generate a new secret key, use the built-in `nino` CLI tool. Run the following command to create a new key:
+
+```
+php nino config loginkey
+```
+
+This will append a new key to your `.env` file. You can then safely remove the old key from the `.env` file.
+
+After generating a new key, run the `php nino wp:login` command again to obtain a new login link using the updated key.
+
 
 ## Folder Structure
 
