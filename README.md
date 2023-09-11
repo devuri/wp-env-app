@@ -29,16 +29,6 @@ Run the following command in your terminal:
 ```shell
 composer create-project devuri/wp-env-app blog
 ```
-
-> or
-
-1. Clone or download the repository to your local development environment.
-2. Install dependencies by running `composer install` in the project root directory.
-3. Rename the `.env.example` file to `.env` and customize it according to your environment settings.
-4. Set up your web server to point to the `public` directory as the document root.
-5. Run the WordPress installation process through your web browser.
-6. Start building your awesome WordPress project!
-
 After the installation process, you will find a new `.env` file in your project directory. This file contains all the necessary environment variables.
 
 ### Configuration
@@ -94,6 +84,16 @@ php nino wp:install
 ```
 
 Now you're ready to start using the framework with your customized configurations and a fresh WordPress installation.
+
+> or
+
+1. Clone or download the repository to your local development environment.
+2. Install dependencies by running `composer install` in the project root directory.
+3. Rename the `.env.example` file to `.env` and customize it according to your environment settings.
+4. Set up your web server to point to the `public` directory as the document root.
+5. Run the WordPress installation process through your web browser.
+6. Start building your awesome WordPress project!
+
 
 ### Auto Login
 
