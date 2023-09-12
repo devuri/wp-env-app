@@ -117,6 +117,7 @@ Here's an overview of the directory structure used:
 > You can also check out the basic version with unified directory structure [WordPress web app skeleton](https://github.com/devuri/wp-app-skeleton).
 
 ```
+├── .snapshot           # New top-level directory for snapshots (replaces backups)
 ├── public              # Web server root directory
 │   ├── app             # WordPress core files (excluded from version control)
 │   │   ├── uploads     # WordPress uploads directory
@@ -125,13 +126,12 @@ Here's an overview of the directory structure used:
 │   ├── mu-plugins      # Must-use plugins directory
 │   ├── plugins         # WordPress plugins directory
 │   ├── wp              # WordPress core files (excluded from version control)
-│   ├── .htaccess       # Web server configuration file [-r-r-r]
-│   ├── index.php       # WordPress entry point [-r-r-r]
-│   └── wp-config.php   # WordPress configuration file [-r-r-r]
+│   ├── .htaccess       # Web server configuration file
+│   ├── index.php       # WordPress entry point
+│   └── wp-config.php   # WordPress configuration file
 ├── publickeys          # Public key used for encryption or verification purposes
-│   └── samplekey.pub   # Example key b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
-├── storage             # Storage directory for backups, cache, and logs
-│   ├── .backups        # Backup directory
+│   └── samplekey.pub   # Example key: b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
+├── storage             # Storage directory for cache and logs
 │   ├── cache           # Cache directory
 │   └── logs            # Logs directory
 │       └── wp-errors   # WordPress error logs
