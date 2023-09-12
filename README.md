@@ -127,8 +127,8 @@ Here's an overview of the directory structure used:
 │   ├── plugins         # WordPress plugins directory
 │   ├── wp              # WordPress core files (excluded from version control)
 │   ├── .htaccess       # Web server configuration file
-│   ├── index.php       # WordPress entry point
-│   └── wp-config.php   # WordPress configuration file
+│   ├── index.php       # WordPress entry point [-r-r-r]
+│   └── wp-config.php   # WordPress configuration file [-r-r-r]
 ├── publickeys          # Public key used for encryption or verification purposes
 │   └── samplekey.pub   # Example key: b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
 ├── storage             # Storage directory for cache and logs
@@ -138,7 +138,7 @@ Here's an overview of the directory structure used:
 ├── vendor              # Composer dependencies directory
 ├── .env                # Environment configuration file
 ├── app.php             # Application configuration file
-├── bootstrap.php       # Bootstrap file
+├── bootstrap.php       # Bootstrap file [-r-r-r]
 ├── composer.json       # Composer configuration file
 └── config.php          # Project configuration file overrides framework constants.
 
