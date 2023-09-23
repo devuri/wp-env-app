@@ -54,6 +54,28 @@ $http_app->overrides();
 $http_app->init();
 
 /**
+ * Retrieve and display a list of $_ENV variables, with some sensitive data obfuscated through hashing.
+ *
+ * This calls the 'get_server_env' method of the '$http_app' object to obtain an array
+ * containing defined $_ENV variables. Some of the sensitive information is hashed for security.
+ * The resulting array is then output using 'var_dump' for debugging purposes.
+ *
+ * @var array
+ */
+// var_dump( $http_app->get_server_env() );
+
+/**
+ * Retrieve and display a list of defined constants, with sensitive data obfuscated through hashing.
+ *
+ * This function calls the 'get_user_constants' method of the '$http_app' object to obtain an array
+ * containing defined constants. Sensitive information within these constants is hashed for security.
+ * The resulting array is then output using 'var_dump' for debugging purposes.
+ *
+ * @var array
+ */
+// var_dump( $http_app->get_user_constants() );
+
+/**
  * WordPress Database Table prefix.
  *
  * You can have multiple installations in one database if you give each
