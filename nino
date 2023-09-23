@@ -8,4 +8,4 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 }
 
 // activate console.
-( new Urisoft\App\Console\Nino( __DIR__ ) )->load();
+( new Urisoft\Env\Console\Nino( __DIR__ ) )->load();
