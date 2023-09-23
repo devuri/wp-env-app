@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.6](https://github.com/devuri/wp-env-app/compare/v0.6.5...v0.6.6) (2023-09-23)
+
+
+### Features
+
+* adds `wpenv-console` ([ea3f28d](https://github.com/devuri/wp-env-app/commit/ea3f28d768816846f392c516c6bbe0cc22519100))
+
 ## [0.6.5](https://github.com/devuri/wp-env-app/compare/v0.6.4...v0.6.5) (2023-09-08)
 
 
