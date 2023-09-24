@@ -7,5 +7,5 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
     exit("Cant find the vendor autoload file.");
 }
 
-// activate console.
+// activate cli console.
 ( new Urisoft\Env\Console\Nino( __DIR__ ) )->load();
