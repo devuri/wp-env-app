@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.7](https://github.com/devuri/wp-env-app/compare/v0.6.6...v0.6.7) (2023-09-24)
+
+
+### Bug Fixes
+
+* fix cli env console for new standalone console ([44ba07a](https://github.com/devuri/wp-env-app/commit/44ba07ac5aa5a3d271813f866d92a23f83016cfc))
+
 ## [0.6.6](https://github.com/devuri/wp-env-app/compare/v0.6.5...v0.6.6) (2023-09-23)
 
 
