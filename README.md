@@ -213,6 +213,14 @@ By default, the Symfony error handler is used. To change the error handler, set 
 
 > Please note that the error handler will only run in `debug`, `development`, or `local` environments.
 
+## .htaccess file for highspeed and security.
+
+An ideal .htaccess configuration file for optimal speed and security is suitable for all WordPress websites with proven effectiveness. 
+It has been rigorously tested on numerous websites to ensure both speed and security.
+In the event that you are operating a WordPress Multisite, adjustments should be made to the final section of this file.
+
+> .htaccess configuration file: https://gist.github.com/seoagentur-hamburg/c96bc796764baaa64d43b70731013f8a
+
 ## Private Repository
 
 You can use the `auth.json` file to install private themes and plugins hosted on GitHub etc using Composer. Follow the steps below:
