@@ -25,6 +25,8 @@ if (file_exists(\dirname(__FILE__) . "/vendor/autoload.php")) {
 /**
  * Start and bootstrap the web application.
  *
+ * For Multi-Tenant Applications: https://devuri.github.io/wp-env-config/multi-tenant/
+ *
  * @var Kernel
  */
 $http_app = wpc_app(__DIR__);
