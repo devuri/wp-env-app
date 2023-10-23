@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require": {
         "devuri/wp-env-config": "dev-master",
-        "devuri/wpenv-console": "^0.1",
+        "devuri/wpenv-console": "^0.2",
         "wpackagist-plugin/query-monitor": "*",
         "wpackagist-plugin/email-log": "*",
         "wpackagist-plugin/sucuri-scanner": "*",
