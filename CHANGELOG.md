@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.9](https://github.com/devuri/wp-env-app/compare/v0.6.8...v0.6.9) (2023-10-23)
+
+
+### Bug Fixes
+
+* No arguments expected for "setup" command ([a3d8a9a](https://github.com/devuri/wp-env-app/commit/a3d8a9a0adda1e1b28f8efc9d7df47e7f58ea82f))
+
 ## [0.6.8](https://github.com/devuri/wp-env-app/compare/v0.6.7...v0.6.8) (2023-10-23)
 
 
