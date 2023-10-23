@@ -56,7 +56,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "@php nino setup example.com"
+            "@php nino setup"
         ]
     },
     "config": {
