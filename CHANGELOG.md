@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.8](https://github.com/devuri/wp-env-app/compare/v0.6.7...v0.6.8) (2023-10-23)
+
+
+### Features
+
+* now with Multi-Tenant Application support ([77735c5](https://github.com/devuri/wp-env-app/commit/77735c545655938f41ebda50cba298a0e9fb7d2b))
+
 ## [0.6.7](https://github.com/devuri/wp-env-app/compare/v0.6.6...v0.6.7) (2023-09-24)
 
 
