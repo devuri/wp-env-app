@@ -290,6 +290,23 @@ You can use the `auth.json` file to install private themes and plugins hosted on
 
 For a fully detailed guide on how to set up private repositories with your project, refer to the [GitHub guide](https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub).
 
+## Local Development Environments
+
+The framework seamlessly integrates with Local WP, enabling you to construct and engage with local environments. Local WP simplifies the process of setting up, managing, and interacting with local WordPress environments, catering to users of Mac, Windows, and Linux.
+
+To configure your environment appropriately, make sure to rename the `.env` file to `.env.local` and adjust the database credentials to match your Local WP settings. Additionally, update the `WP_HOME` to reflect your home URL, for instance: `WP_HOME='http://localhost:10028'`.
+
+The files generated after running `composer create-project devuri/wp-env-app` should be located within the 'app' directory of your Local WP installation.
+
+Here are the database settings for your reference:
+
+```shell
+DB_NAME=local
+DB_USER=root
+DB_PASSWORD=root
+DB_HOST=localhost
+DB_PREFIX=wp_
+```
 
 Congratulations! You now have wp-env-app  up and running. Enjoy developing your WordPress web applications with a lightweight and modular framework. Should you have any questions or encounter any issues submit them through the [issue tracker](https://github.com/devuri/wp-env-app/issues).
 
