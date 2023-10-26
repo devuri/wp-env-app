@@ -221,6 +221,26 @@ In the event that you are operating a WordPress Multisite, adjustments should be
 
 > .htaccess configuration file: https://gist.github.com/seoagentur-hamburg/c96bc796764baaa64d43b70731013f8a
 
+## Enhanced WordPress Installation Security
+
+Prevents the standard WordPress installation screen from appearing in specific environments for enhanced security.
+
+#### Installation Security
+
+A 'WP is not installed' message will display in environments marked as 'secure,' 'sec,' 'production,' or 'prod.'
+
+This change helps prevent unauthorized installations and takeovers, which can occur due to various reasons such as a disconnected database or table prefix changes.
+
+To override this enhancement:
+1. Open your `.env` file.
+2. Set `WP_ENVIRONMENT_TYPE` explicitly to:
+   - `staging`
+   - `development`
+   - `dev`
+   - Or an appropriate value for your environment.
+
+With this setup, your WordPress installation will be secure, and you won't risk unauthorized installations or takeovers.
+
 ## Private Repository
 
 You can use the `auth.json` file to install private themes and plugins hosted on GitHub etc using Composer. Follow the steps below:
