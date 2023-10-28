@@ -290,6 +290,13 @@ You can use the `auth.json` file to install private themes and plugins hosted on
 
 For a fully detailed guide on how to set up private repositories with your project, refer to the [GitHub guide](https://github.com/devuri/Install-Theme-via-Composer-from-Private-Repository-on-GitHub).
 
+### Premium Plugins
+
+Many Premium plugins provide a way to install via composer, Composer simplifies the process of managing dependencies by automating the installation, updating, and removal of plugins. This ensures that you are using the correct version of the plugin, reducing compatibility issues and potential conflicts with other WordPress components.
+
+For more information on the installation of Premium Plugins, check out the documentation [Installation of Premium Plugins](https://devuri.github.io/wp-env-config/premium-plugins/).
+
+
 ## Local Development Environments
 
 The framework seamlessly integrates with Local WP, enabling you to construct and engage with local environments. Local WP simplifies the process of setting up, managing, and interacting with local WordPress environments, catering to users of Mac, Windows, and Linux.
