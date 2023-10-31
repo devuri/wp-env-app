@@ -23,10 +23,9 @@
         "wpackagist-plugin/membership-lock": "*",
         "wpackagist-plugin/snitch": "*",
         "wpackagist-plugin/stream": "*",
-        "wpackagist-plugin/wordfence": "*",
         "wpackagist-plugin/worker": "*",
-        "wpackagist-plugin/wp-auto-updates": "*",
         "wpackagist-plugin/wp-mail-smtp": "*",
+        "wpackagist-theme/kadence": "*",
         "wpackagist-theme/hello-elementor": "*",
         "wpackagist-theme/twentytwentythree": "*"
     },
