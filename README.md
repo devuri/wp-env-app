@@ -317,7 +317,7 @@ DB_PREFIX=wp_
 
 ## Git Ignore
 
-For more information on the framework gitignore, check out the documentation [Git Ignore for the Project Framework](https://devuri.github.io/wp-env-config/gitignore/).
+For more information on the framework gitignore, check out the documentation [Git Ignore for the Project Framework](https://devuri.github.io/wp-env-app/gitignore/).
 
 Congratulations! You now have wp-env-app  up and running. Enjoy developing your WordPress web applications with a lightweight and modular framework. Should you have any questions or encounter any issues submit them through the [issue tracker](https://github.com/devuri/wp-env-app/issues).
 
