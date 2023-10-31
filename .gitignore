@@ -41,6 +41,9 @@ deploy.zip
 .phpdoc/
 .env
 .env.backup
+.env.local
+.secret
+.htaccess
 .phpunit.result.cache
 .phpdoc/cache/
 npm-debug.log
