@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1](https://github.com/devuri/wp-env-app/compare/v0.7.0...v0.7.1) (2023-10-31)
+
+
+### Bug Fixes
+
+* ignore `.env.local` and `.secret` and `.htaccess` ([c061b98](https://github.com/devuri/wp-env-app/commit/c061b989a920c3a89bc4abf4848ba3e16a4cbd23))
+* remove `.env.local` ([8f5055e](https://github.com/devuri/wp-env-app/commit/8f5055e479d850b747a46d1c02ec2cee7d1fc06a))
+
 ## [0.7.0](https://github.com/devuri/wp-env-app/compare/v0.6.9...v0.7.0) (2023-10-31)
 
 
