@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.7.0](https://github.com/devuri/wp-env-app/compare/v0.6.9...v0.7.0) (2023-10-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* uses `wpenv-console": "^0.3"`
+
+### Features
+
+* uses `wpenv-console": "^0.3"` ([db37675](https://github.com/devuri/wp-env-app/commit/db376754a22a5f48413de9f39de954e9fc93e94b))
+
 ## [0.6.9](https://github.com/devuri/wp-env-app/compare/v0.6.8...v0.6.9) (2023-10-23)
 
 
