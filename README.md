@@ -297,7 +297,7 @@ Many Premium plugins provide a way to install via composer, Composer simplifies 
 For more information on premium plugins, check out the documentation [Installation of Premium Plugins](https://devuri.github.io/wp-env-config/premium-plugins/).
 
 
-## Local Development Environments
+## Local Development Environments (LocalWP)
 
 The framework seamlessly integrates with Local WP, enabling you to construct and engage with local environments. Local WP simplifies the process of setting up, managing, and interacting with local WordPress environments, catering to users of Mac, Windows, and Linux.
 
@@ -314,6 +314,8 @@ DB_PASSWORD=root
 DB_HOST=localhost
 DB_PREFIX=wp_
 ```
+
+> If you encounter the well-known error message "Error establishing a database connection", a simple restart of the site in LocalWP might resolve the issue. Additionally, if you're using a VPN, try disconnecting from the VPN, then start the LocalWP site, and attempt the connection again. After this, you can reconnect to your VPN, and everything should function as it previously did.
 
 ## Git Ignore
 
