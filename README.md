@@ -1,10 +1,10 @@
 # A Lightweight WordPress Project Framework
 
-A lightweight framework for your next WordPress web application. It aims to provide a clean and organized structure for managing WordPress projects, making it easier to develop, deploy, and maintain WordPress websites.
+A lightweight framework for your next WordPress web application. This framework is focused on providing a well-organized structure, making it more straightforward to develop, deploy, and maintain WordPress websites and web applications.
 
 >  **Note**
 >
-> ⚠️ **Work in progress:** This project is currently in active development. If you're interested in using this framework, pull requests and issues are welcome.
+> ⚠️ **Work in progress:** Please note: This framework is currently under active development. We welcome community involvement, so feel free to contribute via pull requests or by reporting issues.
 
 ## Features
 
@@ -14,6 +14,8 @@ A lightweight framework for your next WordPress web application. It aims to prov
 - **Enhanced Security**: By moving sensitive files outside of the web root directory, it helps improve the security of your WordPress installation. Critical files are stored outside the public directory, preventing direct access.
 - **Version Control Friendly**: Encourages the use of version control systems like Git. By separating core WordPress files from your project files, it makes it easier to manage and track changes to your custom code while excluding WordPress core files from version control.
 - **Modern Development Workflow**: Embraces modern development practices, allowing you to use build tools like Webpack for asset management and build processes. You can easily integrate frontend frameworks or preprocessors into your project for an optimized development workflow.
+
+This WordPress App Framework is intended to provide a reliable solution for WordPress web application development, enhancing both efficiency and security. We invite the community to join us in refining and evolving this tool.
 
 ## Requirements
 
