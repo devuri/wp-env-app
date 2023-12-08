@@ -14,7 +14,17 @@
  * If you need to modify the behavior of the application, you should do so by changing the values in this file, rather than modifying the core code.
  * This makes it easier to maintain the application and deploy updates without introducing new bugs or breaking changes.
  *
- * @see https://gist.github.com/MikeNGarrett/e20d77ca8ba4ae62adf5 (WordPress Constants)
+ * WordPress Constants Overview
+ * @see [WordPress Constants Documentation](https://gist.github.com/MikeNGarrett/e20d77ca8ba4ae62adf5)
+ *
+ * IMPORTANT: The wp-env-framework already establishes many essential constants. This file allows
+ * modifications to the default framework behavior. It's generally not recommended to edit this file except 
+ * in specific, rare circumstances. Before making any changes, it is advised to consult the framework documentation. 
+ * Often, you may find that modifications to this file are unnecessary.
+ *
+ * For additional information, refer to:
+ * - Framework `app.php` Configuration: [https://devuri.github.io/wp-env-app/configuration/](https://devuri.github.io/wp-env-app/configuration/)
+ * - Environment Variables: [https://devuri.github.io/wp-env-config/env/](https://devuri.github.io/wp-env-config/env/)
  */
 
 
