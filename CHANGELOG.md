@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/devuri/wp-env-app/compare/v0.7.1...v0.7.2) (2023-12-30)
+
+
+### Bug Fixes
+
+* update `publickeys` is now `pubkey` ([250f363](https://github.com/devuri/wp-env-app/commit/250f36326b127b7a9c180e389cba47cc46211caf))
+
 ## [0.7.1](https://github.com/devuri/wp-env-app/compare/v0.7.0...v0.7.1) (2023-10-31)
 
 
