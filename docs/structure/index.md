@@ -17,7 +17,7 @@ This document provides an overview of the directory structure of our framework, 
 │   ├── .htaccess       # Web server configuration file
 │   ├── index.php       # WordPress entry point
 │   └── wp-config.php   # WordPress configuration file
-├── publickeys          # Public key used for encryption or verification purposes
+├── pubkey              # Public key used for encryption or verification purposes
 │   └── samplekey.pub   # Example key: b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
 ├── storage             # Storage directory for cache and logs
 │   ├── cache           # Cache directory
@@ -55,9 +55,9 @@ The `public` directory is the web server root directory and contains essential W
 
 - `wp-config.php`: WordPress configuration file.
 
-### 3. `publickeys`
+### 3. `pubkey`
 
-The `publickeys` directory is intended for storing public keys used for encryption or verification purposes. In this example, there's a sample public key file named `samplekey.pub`.
+The `pubkey` directory is intended for storing public keys used for encryption or verification purposes. In this example, there's a sample public key file named `samplekey.pub`.
 
 ### 4. `storage`
 

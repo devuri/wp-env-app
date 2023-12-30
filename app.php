@@ -345,10 +345,10 @@ return [
      * Represents a public key used for encryption or verification purposes.
      * The public key can be stored as an option in the WordPress options table.
      *
-     * The framework assumes that the public keys are stored in a top-level directory called "publickeys" in either the .pub or .pem format.
+     * The framework assumes that the public keys are stored in a top-level directory called "pubkey" in either the .pub or .pem format.
      * The keys can be retrieved and used as needed. Plugins can be used to fetch and save the keys.
      *
-     * IMPORTANT: If you decide to save these keys, use the base64_encode function.
+     * IMPORTANT: If you decide to save these keys as an option in the WordPress, use the base64_encode function.
      * base64_encode is a function commonly used to encode binary data into a text format that can be safely stored or transmitted in various systems.
      * It takes binary data as input and returns a string consisting of characters from a predefined set (64 characters).
      * This encoding process ensures that the encoded data remains intact and can be decoded back into its original form when needed.

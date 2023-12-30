@@ -40,7 +40,7 @@ Open the `.env` file in a text editor of your choice and make the following conf
 - **DB_PASSWORD:** Set the database password.
 - **DB_HOST:** In most cases, this can remain as 'localhost' if you are using the default database host.
 
-Update the **WP_HOME** value with the correct URL for your application. 
+Update the **WP_HOME** value with the correct URL for your application.
 
 > The framework will automatically generate salts and set the **DB_PREFIX**.
 
@@ -129,7 +129,7 @@ Here's an overview of the directory structure used:
 │   ├── .htaccess       # Web server configuration file
 │   ├── index.php       # WordPress entry point [-r-r-r]
 │   └── wp-config.php   # WordPress configuration file [-r-r-r]
-├── publickeys          # Public key used for encryption or verification purposes
+├── pubkey              # Public key used for encryption or verification purposes
 │   └── samplekey.pub   # Example key: b75b666f-ac11-4342-b001-d2546f1d3a5b.pub
 ├── storage             # Storage directory for cache and logs
 │   ├── cache           # Cache directory
@@ -143,8 +143,8 @@ Here's an overview of the directory structure used:
 └── config.php          # Project configuration file overrides framework constants.
 
 ```
-Items marked `[-r-r-r]` should or can be set as `read-only` 
->  see [framework directory structure](https://devuri.github.io/wp-env-app/structure/) 
+Items marked `[-r-r-r]` should or can be set as `read-only`
+>  see [framework directory structure](https://devuri.github.io/wp-env-app/structure/)
 
 
 ## Additional Customization
@@ -215,7 +215,7 @@ By default, the Symfony error handler is used. To change the error handler, set 
 
 ## .htaccess file for highspeed and security.
 
-An ideal .htaccess configuration file for optimal speed and security is suitable for all WordPress websites with proven effectiveness. 
+An ideal .htaccess configuration file for optimal speed and security is suitable for all WordPress websites with proven effectiveness.
 It has been rigorously tested on numerous websites to ensure both speed and security.
 In the event that you are operating a WordPress Multisite, adjustments should be made to the final section of this file.
 
