@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Enables multi-tenant capabilities in the WordPress setup.
+ * This configuration allows for the management of multiple WordPress sites from a single WordPress installation.
+ * Ensure you understand the tenant setup and have configured the necessary settings before enabling this feature.
+ *
+ * For more details on setting up a multi-tenant environment, refer to the documentation:
+ * @link https://devuri.github.io/wp-env-config/multi-tenant/
+ */
+// define('ALLOW_MULTITENANT', true);
+
+
 /*
  * This is the bootstrap file for the web application.
  *
