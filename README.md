@@ -14,6 +14,7 @@ A lightweight framework for your next WordPress web application. This framework 
 - **Enhanced Security**: By moving sensitive files outside of the web root directory, it helps improve the security of your WordPress installation. Critical files are stored outside the public directory, preventing direct access.
 - **Version Control Friendly**: Encourages the use of version control systems like Git. By separating core WordPress files from your project files, it makes it easier to manage and track changes to your custom code while excluding WordPress core files from version control.
 - **Modern Development Workflow**: Embraces modern development practices, allowing you to use build tools like Webpack for asset management and build processes. You can easily integrate frontend frameworks or preprocessors into your project for an optimized development workflow.
+- **Tenancy** introduces comprehensive multi-tenant functionality starting from version 0.8.0, enabling the support of multiple tenants (websites) within a single environment. Each tenant benefits from its own dedicated database, configuration, and customization options, all while operating on a shared infrastructure. This design ensures maximum flexibility for tailoring solutions to meet specific requirements.
 
 This WordPress App Framework is intended to provide a reliable solution for WordPress web application development, enhancing both efficiency and security. We invite the community to join us in refining and evolving this tool.
 
