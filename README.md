@@ -320,6 +320,26 @@ DB_PREFIX=wp_
 
 > If you encounter the well-known error message "Error establishing a database connection", a simple restart of the site in LocalWP might resolve the issue. Additionally, if you're using a VPN, try disconnecting from the VPN, then start the LocalWP site, and attempt the connection again. After this, you can reconnect to your VPN, and everything should function as it previously did.
 
+## Enabling Multi-Tenant Support
+
+Before proceeding with any modifications, it's crucial to ensure the safety of your WordPress site. Make sure to create a comprehensive backup of both your WordPress files and database. For more insights on multi-tenant configurations, consider exploring detailed information available at [multi-tenant documentation](https://devuri.github.io/wp-env-config/multi-tenant/).
+
+### Steps to Enable Multi-Tenant:
+
+1. Navigate to the public directory of the framework installation and locate the `wp-config.php` file.
+
+2. Open the `wp-config.php` file and find the section where `ALLOW_MULTITENANT` constant is defined. You will need to insert or update the specific line to enable multi-tenant functionality.
+
+3. Modify the file by adding or updating the following line of code, which sets the `ALLOW_MULTITENANT` constant to `true`. This change will activate the multi-tenant features:
+
+    ```php
+    define('ALLOW_MULTITENANT', true);
+    ```
+
+For a reference implementation or to see an example of this configuration in action, you can view the [Project Framework config file example](https://github.com/devuri/wp-env-app/blob/main/public/wp-config.php#L11).
+
+By following these steps, your application installation will be configured to support multi-tenant capabilities, allowing for enhanced flexibility and scalability.
+
 ## Git Ignore
 
 For more information on the framework gitignore, check out the documentation [Git Ignore for the Project Framework](https://devuri.github.io/wp-env-app/gitignore/).
