@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.8.0](https://github.com/devuri/wp-env-app/compare/v0.7.2...v0.8.0) (2024-02-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* better tenancy support and new `config` directory for app.php
+
+### Features
+
+* better tenancy support and new `config` directory for app.php ([8a23edd](https://github.com/devuri/wp-env-app/commit/8a23edd07ce5df6f2ff68911be4028045fa1286f))
+
 ## [0.7.2](https://github.com/devuri/wp-env-app/compare/v0.7.1...v0.7.2) (2023-12-30)
 
 
